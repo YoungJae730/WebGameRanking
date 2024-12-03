@@ -1,0 +1,19 @@
+/
+/login
+/register
+/profile
+/ranking
+/game1,2,3,4
+
+
+파라미터 스토어로 링크(rds 등)
+로드밸런서로 ec2
+이미지 s3
+cloudfront로 캐싱
+
+
+--게임--
+2048
+지뢰찾기
+지렁이게임
+테트리스

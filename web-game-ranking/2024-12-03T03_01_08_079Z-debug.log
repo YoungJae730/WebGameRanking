@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/bin/node-18',
+1 verbose cli   '/usr/local/lib/node_modules/npx/node_modules/npm/bin/npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'create-react-app@latest',
+1 verbose cli   '--global',
+1 verbose cli   '--prefix',
+1 verbose cli   '/home/ec2-user/.npm/_npx/26860',
+1 verbose cli   '--loglevel',
+1 verbose cli   'error',
+1 verbose cli   '--json'
+1 verbose cli ]
+2 info using npm@5.1.0
+3 info using node@v18.20.4
+4 verbose npm-session ffe4475ab4de51c9
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 http fetch GET 304 https://registry.npmjs.org/create-react-app 189ms (from cache)
+8 silly pacote tag manifest for create-react-app@latest fetched in 234ms
+9 verbose stack TypeError: cb.apply is not a function
+9 verbose stack     at /usr/local/lib/node_modules/npx/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18
+9 verbose stack     at FSReqCallback.oncomplete (node:fs:203:5)
+10 verbose cwd /home/ec2-user
+11 verbose Linux 6.1.115-126.197.amzn2023.x86_64
+12 verbose argv "/usr/bin/node-18" "/usr/local/lib/node_modules/npx/node_modules/npm/bin/npm-cli.js" "install" "create-react-app@latest" "--global" "--prefix" "/home/ec2-user/.npm/_npx/26860" "--loglevel" "error" "--json"
+13 verbose node v18.20.4
+14 verbose npm  v5.1.0
+15 error cb.apply is not a function
+16 verbose exit [ 1, true ]
