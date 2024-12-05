@@ -1,0 +1,51 @@
+.minesweeper {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(30, 20px);
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .cell {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  
+  .cell.revealed {
+    background-color: #ddd;
+  }
+  
+  .cell.mine {
+    background-color: ddd;
+  }
+  
+  .cell.flag {
+    background-color: yellow; /* 깃발이 있는 셀은 노란색으로 표시 */
+    color: red;
+  }
+  
+  
+  .game-over {
+    color: red;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  
+  .score {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  

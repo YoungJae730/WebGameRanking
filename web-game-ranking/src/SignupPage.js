@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function SignupPage() {
+  const apiUrl = process.env.REACT_APP_API_ENDPOINT_URL;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
@@ -21,15 +22,16 @@ function SignupPage() {
     setPasswordError(""); // 비밀번호가 일치하면 오류 메시지 초기화
 
     try {
-      const response = await fetch("http://localhost:5000/api/signup", {
+      const response = await fetch(apiUrl + "/api/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password, name }),
       });
       
-      if (!response.ok) throw new Error(response.json().message);
-
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message);
       navigate("/login");
+      alert(data.message);
     } catch (err) {
       setError(err.message);
     }

@@ -5,6 +5,7 @@ import LoginPage from './LoginPage';
 import SignupPage from "./SignupPage";
 import ProfilePage from "./ProfilePage";
 import RankingPage from "./RankingPage";
+import Game1Page from "./games/Game_1";
 
 function App() {
   const [user, setUser] = useState(null); // 로그인 상태 관리
@@ -15,11 +16,17 @@ function App() {
     const storedUser = localStorage.getItem("user");
     const storedToken = localStorage.getItem("token");
     if (storedUser && storedToken) {
-      setUser(JSON.parse(storedUser));
-      setToken(storedToken);
+      try{
+        setUser(JSON.parse(storedUser));
+        setToken(storedToken);
+      } catch {
+        setUser(null);
+        setToken(null);
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+      }
     }
   }, []);
-
   // 로그아웃 핸들러
   const handleLogout = () => {
     setUser(null);
@@ -42,11 +49,15 @@ function App() {
         />
         <Route
           path="/profile"
-          element={<ProfilePage />}
+          element={<ProfilePage user={user} />}
         />
         <Route
           path="/ranking"
           element={<RankingPage />}
+        />
+        <Route
+          path="/game_1"
+          element={<Game1Page user={user}/>}
         />
       </Routes>
     </Router>

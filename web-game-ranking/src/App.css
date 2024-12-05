@@ -220,3 +220,92 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+/* 게임 랭킹 페이지 스타일 */
+.rankings-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.no-rankings {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.loading,
+.error {
+  font-size: 1.2rem;
+  color: red;
+  margin-top: 20px;
+}
+
+/* 게임 랭킹 카드 스타일 */
+.game-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.ranking-table th,
+.ranking-table td {
+  padding: 8px 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.ranking-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.ranking-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ranking-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .rankings-container {
+    width: 95%;
+  }
+
+  .game-card {
+    width: 100%;
+  }
+
+  .ranking-table th,
+  .ranking-table td {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+}
+
